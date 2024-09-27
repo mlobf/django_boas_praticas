@@ -2,3 +2,6 @@
 line-length = 140
 target-version = ['py312']
 skip-string-normalization = true
+exclude = ".myvenv"
+
+

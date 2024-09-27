@@ -3,3 +3,6 @@ psycopg2-binary>=2.9
 black
 flake8
 pre-commit
+ipython
+isort
+gunicorn==20.1.0
