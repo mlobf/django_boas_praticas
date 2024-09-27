@@ -7,9 +7,15 @@ set -e
 echo "Aplicando migrações..."
 python sample_project/manage.py migrate
 
-# Coletar arquivos estáticos (se aplicável)
-# echo "Coletando arquivos estáticos..."
-# python sample_project/manage.py collectstatic --noinput
+# Criar superusuário se não existir
+if [ -n "$DJANGO_SUPERUSER_USERNAME" ] && [ -n "$DJANGO_SUPERUSER_PASSWORD" ]; then
+    echo "Verificando se o superusuário existe..."
+    python sample_project/manage.py createsuperuser \
+        --username "$DJANGO_SUPERUSER_USERNAME" \
+        --email "$DJANGO_SUPERUSER_EMAIL" \
+        --noinput || true
+    echo "Superusuário verificado ou criado."
+fi
 
 # Iniciar o servidor
 echo "Iniciando o servidor..."

@@ -27,6 +27,9 @@ services:
       POSTGRES_PASSWORD: mypassword
       POSTGRES_HOST: db
       POSTGRES_PORT: 5432
+      DJANGO_SUPERUSER_USERNAME: admin
+      DJANGO_SUPERUSER_EMAIL: admin@gmail.com
+      DJANGO_SUPERUSER_PASSWORD: adminadmin
     networks:
       - app-network
 
@@ -35,4 +38,11 @@ volumes:
 
 networks:
   app-network:
+
+
+
+
+
+
+
 

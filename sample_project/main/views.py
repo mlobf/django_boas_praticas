@@ -1,14 +1,25 @@
-from django.shortcuts import render
+# sample_project/main/views.py
 
-# Create your views here.
+from rest_framework import generics
+from .models import City, Address
+from .serializers import CitySerializer, AddressSerializer
 
-x = 1
-y = 1
-z = 1
-i = 1
-k = 1
-f = 1
-u = 1
 
-if x == y and x == z and i == y and u == x and k == f and k == f and k == f and k == f and k == f:
-    print('oi')
+class CityListCreateAPIView(generics.ListCreateAPIView):
+    queryset = City.objects.all()
+    serializer_class = CitySerializer
+
+
+class CityRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = City.objects.all()
+    serializer_class = CitySerializer
+
+
+class AddressListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Address.objects.all()
+    serializer_class = CitySerializer
+
+
+class AddressRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Address.objects.all()
+    serializer_class = AddressSerializer
