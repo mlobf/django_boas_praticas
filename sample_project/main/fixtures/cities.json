@@ -1,0 +1,98 @@
+[
+    {
+        "model": "main.city",
+        "pk": "e8b2d6d6-9b5e-4b8b-98e3-21f98b0c9a6d",
+        "fields": {
+            "city_name": "Belo Horizonte",
+            "short_name": "BH"
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": "ed3b4a2f-1e63-46a1-9ed8-dbf6c2a4f5c7",
+        "fields": {
+            "city_name": "Brasília",
+            "short_name": "BSB"
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": "a4d2c5b8-6f3e-4d9a-8b7c-1f6a2e3d4c5b",
+        "fields": {
+            "city_name": "Salvador",
+            "short_name": "SAL"
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": "b5c6d7e8-9f0a-4b1c-8d3e-4f5a6b7c8d9e",
+        "fields": {
+            "city_name": "Fortaleza",
+            "short_name": "FOR"
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": "c6d7e8f9-0a1b-4c2d-9e3f-5a6b7c8d9e0f",
+        "fields": {
+            "city_name": "Curitiba",
+            "short_name": "CTBA"
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": "d7e8f9a0-1b2c-4d3e-8f6a-7b8c9d0e1f2a",
+        "fields": {
+            "city_name": "Manaus",
+            "short_name": "MAN"
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": "e8f9a0b1-2c3d-4e5f-9a7b-8c9d0e1f2a3b",
+        "fields": {
+            "city_name": "Recife",
+            "short_name": "REC"
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": "f9a0b1c2-3d4e-5f6a-8b8c-9d0e1f2a3b4c",
+        "fields": {
+            "city_name": "Porto Alegre",
+            "short_name": "POA"
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": "0a1b2c3d-4e5f-6a7b-9c9d-0e1f2a3b4c5d",
+        "fields": {
+            "city_name": "Belém",
+            "short_name": "BEL"
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": "1b2c3d4e-5f6a-7b8c-0d1e-1f2a3b4c5d6e",
+        "fields": {
+            "city_name": "Goiânia",
+            "short_name": "GYN"
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": "2c3d4e5f-6a7b-8c9d-1e2f-2a3b4c5d6e7f",
+        "fields": {
+            "city_name": "Guarulhos",
+            "short_name": "GRU"
+        }
+    },
+    {
+        "model": "main.city",
+        "pk": "3d4e5f6a-7b8c-9d0e-2f3a-3b4c5d6e7f80",
+        "fields": {
+            "city_name": "Campinas",
+            "short_name": "CPQ"
+        }
+    }
+]

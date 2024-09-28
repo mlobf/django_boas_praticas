@@ -13,5 +13,3 @@ class CityListCreateAPIView(generics.ListCreateAPIView):
 class CityRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = City.objects.all()
     serializer_class = CitySerializer
-
-
