@@ -17,3 +17,6 @@ class City(models.Model):
         ordering = ['city_name']
         verbose_name = _('City')
         verbose_name_plural = _('Cities')
+
+    def __str__(self):
+        return f'{self.id}+{self.city_name}+{self.short_name}'
