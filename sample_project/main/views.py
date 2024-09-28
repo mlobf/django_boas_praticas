@@ -1,8 +1,8 @@
 # sample_project/main/views.py
 
 from rest_framework import generics
-from .models import City, Address
-from .serializers import CitySerializer, AddressSerializer
+from .models import City
+from .serializers import CitySerializer
 
 
 class CityListCreateAPIView(generics.ListCreateAPIView):
@@ -15,11 +15,3 @@ class CityRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CitySerializer
 
 
-class AddressListCreateAPIView(generics.ListCreateAPIView):
-    queryset = Address.objects.all()
-    serializer_class = CitySerializer
-
-
-class AddressRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Address.objects.all()
-    serializer_class = AddressSerializer

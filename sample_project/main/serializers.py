@@ -1,7 +1,7 @@
 # sample_project/main/serializers.py
 
 from rest_framework import serializers
-from .models import City, Address
+from .models import City
 
 
 class CitySerializer(serializers.ModelSerializer):
@@ -10,7 +10,3 @@ class CitySerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class AddressSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Address
-        fields = '__all__'
