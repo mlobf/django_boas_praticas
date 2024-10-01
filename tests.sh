@@ -25,7 +25,9 @@ wait_for_db
 
 # Executa os testes do Django no diretório correto
 echo "Executando os testes do Django..."
-docker-compose exec -w /app/sample_project $SERVICE_NAME python3 manage.py test main --verbosity=2
+docker-compose exec -w /app/sample_project $SERVICE_NAME coverage run manage.py test main --verbosity=2
+echo "Executando o report do Coverage no Django..."
+docker-compose exec -w /app/sample_project $SERVICE_NAME coverage report 
 
 # Opcional: Para os contêineres após os testes
 # echo "Parando os contêineres Docker..."

@@ -1,11 +1,17 @@
 ------------------------------------------------------------------------------
 Baixa Complexidade - somente um models
 ------------------------------------------------------------------------------
+
+(OK)  Script para a execusao dos testes dentro de um conteiner docker
+
 cobertura de testes
+
     -pytest-cov
     -Coverage.py
+
 pre commit
     -pre commit
+
 pipeline
     -gitlabs
 
