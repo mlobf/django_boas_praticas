@@ -1,13 +1,11 @@
 ------------------------------------------------------------------------------
 Baixa Complexidade - somente um models
 ------------------------------------------------------------------------------
-
-(OK)  Script para a execusao dos testes dentro de um conteiner docker
-
+(OK) Script para a execusao dos testes dentro de um conteiner docker
 cobertura de testes
+(OK) Coverage.py
 
-    -pytest-cov
-    -Coverage.py
+Usar o make para rodar os scripts de desenvolvimento e testes.
 
 pre commit
     -pre commit
