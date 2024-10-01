@@ -1,0 +1,30 @@
+------------------------------------------------------------------------------
+Baixa Complexidade - somente um models
+------------------------------------------------------------------------------
+cobertura de testes
+    -pytest-cov
+    -Coverage.py
+pre commit
+    -pre commit
+pipeline
+    -gitlabs
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+Media Complexidade - somente quatro models -realcao um para um e
+    relacao um para muitos
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+Alta Complexidade - mais de quatro models - realacao um para muitos,
+    um para um e muitos para muitos.
+------------------------------------------------------------------------------
+Adicionar sistema de autenticacao de multiplas permissoes.
+Adicionar ambiente de homologacao.
+Adicionar ambiente de producao.
+    -Configurar deploy em um EC2.
+
+
+
+------------------------------------------------------------------------------
+
+

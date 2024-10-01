@@ -5,12 +5,15 @@ set -e
 
 # Aplicar migrações
 echo "Aplicando migrações..."
-python sample_project/manage.py migrate
+echo "Aplicando make migrations..."
+python3 sample_project/manage.py makemigrations
+echo "Aplicando make migrate..."
+python3 sample_project/manage.py migrate
 
 # Criar superusuário se não existir
 if [ -n "$DJANGO_SUPERUSER_USERNAME" ] && [ -n "$DJANGO_SUPERUSER_PASSWORD" ]; then
     echo "Verificando se o superusuário existe..."
-    python sample_project/manage.py createsuperuser \
+    python3 sample_project/manage.py createsuperuser \
         --username "$DJANGO_SUPERUSER_USERNAME" \
         --email "$DJANGO_SUPERUSER_EMAIL" \
         --noinput || true
@@ -20,4 +23,6 @@ fi
 # Iniciar o servidor
 echo "Iniciando o servidor..."
 exec "$@"
+
+
 
