@@ -20,3 +20,16 @@ class City(models.Model):
 
     def __str__(self):
         return f'{self.id}+{self.city_name}+{self.short_name}'
+
+
+"""
+Simular um comportamento basico para o sistema de jogos para simular uma melhor implementacao.
+
+Model Cassino
+Model Game
+Model Operator
+Model Currency
+Model User
+Model Igs
+
+"""

@@ -36,5 +36,3 @@ class CityModelTwoTest(TestCase):
         city = City.objects.create(city_name='Piracicaba', short_name='PIRA')
         self.assertEqual(city.city_name, 'Piracicaba')
         self.assertEqual(city.short_name, 'PIRA')
-
-

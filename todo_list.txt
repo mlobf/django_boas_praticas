@@ -6,6 +6,7 @@ cobertura de testes
 (OK) Coverage.py
 (OK) Testar a API em GET e POST
 (OK) Usar o make para rodar os scripts de desenvolvimento e testes.
+(OK) Add estrutura basica de dataclass e abstract_class em utils
 
 pre commit
     -pre commit

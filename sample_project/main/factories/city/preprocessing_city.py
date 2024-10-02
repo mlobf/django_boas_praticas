@@ -1,0 +1,3 @@
+class CheckingCityPreprocessingFactory:
+
+    raise NotImplementedError()
