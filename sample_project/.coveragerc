@@ -1,7 +1,8 @@
 [run]
 source = main
 omit =
-    */tests.py
+    */tests/
+    */tests_city.py
     */migrations/*
     */__init__.py
 

@@ -4,8 +4,8 @@ Baixa Complexidade - somente um models
 (OK) Script para a execusao dos testes dentro de um conteiner docker
 cobertura de testes
 (OK) Coverage.py
-
-Usar o make para rodar os scripts de desenvolvimento e testes.
+(OK) Testar a API em GET e POST
+(OK) Usar o make para rodar os scripts de desenvolvimento e testes.
 
 pre commit
     -pre commit

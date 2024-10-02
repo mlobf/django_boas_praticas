@@ -1,9 +1,9 @@
 from django.test import TestCase
-from .models import City
+from main.models import City
 
 
-class CityModelTest(TestCase):
-    fixtures = ['cities.json']
+class CityModelTwoTest(TestCase):
+    fixtures = ['main/tests/fixtures/cities.json']
 
     def test_all_cities(self):
         """Testa de o total de cidades contidas no mock
@@ -36,3 +36,5 @@ class CityModelTest(TestCase):
         city = City.objects.create(city_name='Piracicaba', short_name='PIRA')
         self.assertEqual(city.city_name, 'Piracicaba')
         self.assertEqual(city.short_name, 'PIRA')
+
+
