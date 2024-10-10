@@ -20,5 +20,9 @@ class BaseCity(ABC):
 
     @abstractmethod
     def refresh(self):
-        # Apply specific city constraints over a main process, changing them if applicable."""
+        """
+        Apply specific city consrraints over a main process,
+        changing them if applicable.
+        """
+
         raise NotImplementedError()
