@@ -8,8 +8,12 @@ cobertura de testes
 (OK) Usar o make para rodar os scripts de desenvolvimento e testes.
 (OK) Add estrutura basica de dataclass e abstract_class em utils
 (OK) Add pre commit
-(OK) Add ambientes de desenvolvimento, teste e producao de forma dinamica 
+( )Add debugger dentro do conteiner.
+
+(  ) Add ambientes de desenvolvimento, teste e producao de forma dinamica 
         via sufixo no comando manage.py
+( ) Add Git Flow no processo de desenvolvimento.
+
 
 pipeline
     -gitlabs

@@ -8,6 +8,9 @@ from .serializers import CitySerializer
 class CityListCreateAPIView(generics.ListCreateAPIView):
     queryset = City.objects.all()
     serializer_class = CitySerializer
+    import pdb
+
+    pdb.set_trace()
 
 
 class CityRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
