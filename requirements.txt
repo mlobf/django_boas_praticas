@@ -9,4 +9,4 @@ gunicorn==20.1.0
 djangorestframework
 coverage
 python-decouple
-
+ipdb
