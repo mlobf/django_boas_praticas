@@ -7,6 +7,7 @@
 help:
 	@echo "Comandos disponíveis:"
 	@echo "  make up     - Inicia os contêineres Docker em segundo plano"
+	@echo "  make run    - Executa o bash dentro do container"
 	@echo "  make test   - Executa os testes usando o script tests.sh"
 	@echo "  make down   - Para e remove os contêineres Docker"
 	@echo "  make help   - Exibe esta mensagem de ajuda"
@@ -14,6 +15,12 @@ help:
 # Alvo para iniciar os contêineres Docker
 up:
 	docker-compose up --build
+
+
+# Alvo para entrar dentro do container no modo interativo
+run:
+	docker-compose up --build -d
+	docker exec -it django_boas_praticas-web-1 /bin/bash
 
 # Alvo para executar os testes
 test:
