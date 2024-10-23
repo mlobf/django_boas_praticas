@@ -10,3 +10,10 @@ djangorestframework
 coverage
 python-decouple
 ipdb
+django-extensions
+
+
+
+
+
+
