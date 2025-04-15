@@ -39,3 +39,20 @@ class CityGetAPITestCase(APITestCase):
         self.assertEqual(len(response.data), 2)
         self.assertEqual(response.data[0]['city_name'], 'Piracicaba')
         self.assertEqual(response.data[1]['city_name'], 'São Paulo')
+
+
+class CityDeleteAPITestCase(APITestCase):
+    def setUp(self):
+        self.client = APIClient()
+        self.city = City.objects.create(city_name='Campinas', short_name='CPS')
+
+    def test_delete_city(self):
+        # Realiza uma requisição DELETE no endpoint da cidade criada
+        url = f'/api/cities/{self.city.id}/'
+        response = self.client.delete(url)
+
+        # Verifica se o status é 204 NO CONTENT (deletado com sucesso)
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
+        # Verifica se a cidade foi realmente removida do banco de dados
+        self.assertFalse(City.objects.filter(id=self.city.id).exists())
