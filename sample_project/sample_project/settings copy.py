@@ -18,11 +18,53 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+ENVIRONMENT = config("ENVIRONMENT", default="development")
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY", default='django-insecure-@u5)^88=&5)(bt$tgqm=@%^alb_&@_-co^6_&lcu60h@4c3v6p')
+# SECRET_KEY = config("SECRET_KEY", default='django-insecure-@u5)^88=&5)(bt$tgqm=@%^alb_&@_-co^6_&lcu60h@4c3v6p')
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+
+        "NAME": config("POSTGRES_DB"),
+        'USER': config('POSTGRES_USER'),
+        'PASSWORD': config('POSTGRES_PASSWORD'),
+        'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
+        'PORT': os.environ.get('POSTGRES_PORT', '5432'),
+    }
+}
+"""
+
+if ENVIRONMENT == "production":
+    SECRET_KEY = config("SECRET_KEY_PROD", default='django-insecure-@u5)^88=&5)(bt$tgqm=@%^alb_&@_-co^6_&lcu60h@4c3v6p')
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": config("PROD_DB_NAME"),
+            "USER": config("PROD_DB_USER"),
+            "PASSWORD": config("PROD_DB_PASS"),
+            "HOST": config("PROD_DB_HOST"),
+            "PORT": config("PROD_DB_PORT"),
+        }
+    }
+else:
+    SECRET_KEY = config("SECRET_KEY_DEV", default='django-insecure-@u5)^88=&5)(bt$tgqm=@%^alb_&@_-co^6_&lcu60h@4c3v6p')
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": config("DEV_DB_NAME"),
+            "USER": config("DEV_DB_USER"),
+            "PASSWORD": config("DEV_DB_PASS"),
+            "HOST": config("DEV_DB_HOST"),
+            "PORT": config("DEV_DB_PORT"),
+        }
+    }
+
+DEBUG = ENVIRONMENT == "development"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", default=False, cast=bool)
@@ -33,7 +75,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,7 +119,7 @@ WSGI_APPLICATION = 'sample_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -89,6 +130,7 @@ DATABASES = {
         'PORT': os.environ.get('POSTGRES_PORT', '5432'),
     }
 }
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

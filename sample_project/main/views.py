@@ -11,7 +11,7 @@ class CityListCreateAPIView(generics.ListCreateAPIView):
 
     import ipdb
 
-    ipdb.set_trace()
+    # ipdb.set_trace()
 
 
 class CityRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):

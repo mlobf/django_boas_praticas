@@ -21,7 +21,7 @@ class BaseCity(ABC):
     @abstractmethod
     def refresh(self):
         """
-        Apply specific city consrraints over a main process,
+        Apply specific city constrains over a main process,
         changing them if applicable.
         """
 
